@@ -21,7 +21,6 @@
     "mongoose": "^7.0.3",
     "npm": "^9.6.2",
     "redis": "^4.6.5",
-    "socket.io": "^4.6.1",
     "winston": "^3.8.2",
     "winston-mongodb": "^5.1.1"
   },
