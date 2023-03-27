@@ -6,19 +6,7 @@ const winston = require("winston")
 const expressWinston = require("express-winston")
 require('winston-mongodb');
 
-app.use(expressWinston.logger({
-    transports: [
-      new winston.transports.MongoDB({
-        db: process.env.mongoURL,
-        level: "error"
-      })
-    ],
-    format: winston.format.json(),
-    meta: true, 
-    expressFormat: true,
-    colorize: false,  
-    ignoreRoute: function (req, res) { return false; } 
-  }));
+
 
 
 const { createClient } = require('redis');
@@ -36,6 +24,21 @@ const { level } = require("winston")
 const app = express()
 app.use(express.json())
 app.use(cors())
+
+app.use(expressWinston.logger({
+  transports: [
+    new winston.transports.MongoDB({
+      db: process.env.mongoURL,
+      level: "error"
+    })
+  ],
+  format: winston.format.json(),
+  meta: true, 
+  expressFormat: true,
+  colorize: false,  
+  ignoreRoute: function (req, res) { return false; } 
+}));
+
 app.use("/user", userRouter)
 app.use("/weather", weatherRoute)
 
