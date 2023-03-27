@@ -1,0 +1,33 @@
+{
+  "name": "unit-5-full-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "redis": "^4.6.5",
+    "socket.io": "^4.6.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuttu101996/mini_backend_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kuttu101996/mini_backend_project/issues"
+  },
+  "homepage": "https://github.com/kuttu101996/mini_backend_project#readme"
+}
